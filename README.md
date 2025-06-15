@@ -1,4 +1,4 @@
-# 🧠 Emotion Analysis via Deep Learning on Facial Videos
+# Emotion Analysis via Deep Learning on Facial Videos
 
 ## 🎯 Introduction
 
@@ -31,20 +31,20 @@ Before training, videos are preprocessed using a custom pipeline:
 
 ## 🧪 Model Architectures
 
-### 🌀 Common CNN Feature Extractor
+### Common CNN Feature Extractor
 - `Conv2D(16)` → ReLU → MaxPool → **(16×32×32)**
 - `Conv2D(32)` → ReLU → MaxPool → **(32×16×16)**
 - Flatten → **8192 features per frame**
 
 ---
 
-### 🔁 LSTM-Based Model
+### LSTM-Based Model
 - **LSTM** processes 60 frames (hidden size: 128)
 - Final hidden state → Fully connected layer → **8 emotion classes**
 
 ---
 
-### 🎯 Attention-Based Model
+### Attention-Based Model
 - Same CNN backbone
 - Project features into embedding space
 - Add **positional encoding**
@@ -65,7 +65,7 @@ Shared training configuration:
 
 ## 📊 Results
 
-### 📈 LSTM Results
+### LSTM Results
 - **Training Accuracy**: 97%
 - **Validation Accuracy**: 80%
 - **Training Loss**: 11.87
@@ -75,7 +75,7 @@ Shared training configuration:
 
 ---
 
-### 🧠 Attention-Based Results
+### Attention-Based Results
 - **Training Accuracy**: 88%
 - **Validation Accuracy**: 73%
 - **Training Loss**: 18.71
@@ -89,11 +89,11 @@ Shared training configuration:
 
 | **Aspect**              | **LSTM**           | **Attention-Based**          |
 |-------------------------|--------------------|-------------------------------|
-| Validation Accuracy     | ✅ 80%              | ⚠️ 73%                        |
-| Training Speed          | ⚡ Fast             | 🐢 Slower                     |
-| Memory Handling         | ⏱️ Temporal memory  | 🌐 Global attention           |
-| Computational Cost      | 🔁 Linear           | 🔲 Quadratic (sequence-wise)  |
-| Interpretability        | ❌ Limited          | ✅ Attention maps possible     |
+| Validation Accuracy     | 80%              | 73%                        |
+| Training Speed          | Fast             | Slower                     |
+| Memory Handling         | Temporal memory  | Global attention           |
+| Computational Cost      | Linear           | Quadratic (sequence-wise)  |
+| Interpretability        | Limited          | Attention maps possible     |
 
 ---
 
