@@ -26,6 +26,8 @@ Before training, videos are preprocessed using a custom pipeline:
 3. **Crop and save** face images.
 4. **Organize** images by actor and video ID for training.
 
+Dataset preparation is made in this file `Dataset_preparation.py`
+
 
 ## 🧪 Model Architectures
 
