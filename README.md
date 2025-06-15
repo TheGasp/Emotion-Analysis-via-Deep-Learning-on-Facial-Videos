@@ -32,7 +32,7 @@ The project uses the following Python packages:
 | `matplotlib`   | 3.10.1            |
 | `scikit-learn` | 1.6.1             |
 
-> 🖥️ Model training was performed using **CUDA 12.7** on an **NVIDIA RTX 4060 GPU** (8 GB VRAM).
+> Model training was performed using **CUDA 12.7** on an **NVIDIA RTX 4060 GPU** (8 GB VRAM).
 
 
 
