@@ -9,12 +9,31 @@ The dataset used is **RAVDESS**, containing video recordings of 10 actors expres
 
 > Neutral, Calm, Happy, Sad, Angry, Fearful, Disgust, Surprised
 
+The dataset can be found here : https://zenodo.org/records/1188976
+
 ### Dataset Details
 - Emotional Intensity: `01 = normal`, `02 = strong` (neutral only has normal)
 - Two statements × Two repetitions per emotion
 - Truncation: **First 60 frames** per video
 - Image size: **64×64**
 - Data split: **80% train / 20% validation**
+
+## 📦 Requirements
+
+The project uses the following Python packages:
+
+| Package        | Version           |
+|----------------|-------------------|
+| `torch`        | 2.5.1+cu124       |
+| `torchvision`  | 0.20.1+cu124      |
+| `requests`     | 2.23.3            |
+| `pillow`       | 11.0.0            |
+| `numpy`        | 2.1.1             |
+| `matplotlib`   | 3.10.1            |
+| `scikit-learn` | 1.6.1             |
+
+> 🖥️ Model training was performed using **CUDA 12.7** on an **NVIDIA RTX 4060 GPU** (8 GB VRAM).
+
 
 
 ## 🗃️ Dataset Preparation
