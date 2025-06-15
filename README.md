@@ -41,6 +41,8 @@ Dataset preparation is made in this file `Dataset_preparation.py`
 - **LSTM** processes 60 frames (hidden size: 128)
 - Final hidden state → Fully connected layer → **8 emotion classes**
 
+LSTM training is done here `Lstm_video_classification.ipynb`
+
 
 ### Attention-Based Model
 - Same CNN backbone
@@ -49,6 +51,7 @@ Dataset preparation is made in this file `Dataset_preparation.py`
 - **Transformer Encoder** (1 layer, multi-head attention)
 - Global average pooling → Fully connected → **8 emotion classes**
 
+Attention-based training is done here `Attention-Based_video_classification.ipynb`
 
 ## ⚙️ Training Parameters
 
