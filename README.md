@@ -16,7 +16,6 @@ The dataset used is **RAVDESS**, containing video recordings of 10 actors expres
 - Image size: **64×64**
 - Data split: **80% train / 20% validation**
 
----
 
 ## 🗃️ Dataset Preparation
 
@@ -27,7 +26,6 @@ Before training, videos are preprocessed using a custom pipeline:
 3. **Crop and save** face images.
 4. **Organize** images by actor and video ID for training.
 
----
 
 ## 🧪 Model Architectures
 
@@ -36,13 +34,11 @@ Before training, videos are preprocessed using a custom pipeline:
 - `Conv2D(32)` → ReLU → MaxPool → **(32×16×16)**
 - Flatten → **8192 features per frame**
 
----
 
 ### LSTM-Based Model
 - **LSTM** processes 60 frames (hidden size: 128)
 - Final hidden state → Fully connected layer → **8 emotion classes**
 
----
 
 ### Attention-Based Model
 - Same CNN backbone
@@ -51,7 +47,6 @@ Before training, videos are preprocessed using a custom pipeline:
 - **Transformer Encoder** (1 layer, multi-head attention)
 - Global average pooling → Fully connected → **8 emotion classes**
 
----
 
 ## ⚙️ Training Parameters
 
@@ -61,7 +56,6 @@ Shared training configuration:
 - **Loss**: CrossEntropy
 - **Epochs**: 30
 
----
 
 ## 📊 Results
 
@@ -73,7 +67,6 @@ Shared training configuration:
 
 ⚠️ Confusion on **neutral** class due to class imbalance.
 
----
 
 ### Attention-Based Results
 - **Training Accuracy**: 88%
@@ -83,7 +76,6 @@ Shared training configuration:
 
 ⚠️ Misclassification on **neutral** and **angry** classes.
 
----
 
 ## 🔍 Comparison Table
 
@@ -95,7 +87,6 @@ Shared training configuration:
 | Computational Cost      | Linear           | Quadratic (sequence-wise)  |
 | Interpretability        | Limited          | Attention maps possible     |
 
----
 
 ## 🎥 Online Inference Interface
 
